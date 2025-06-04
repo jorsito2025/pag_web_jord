@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+<body>
+
+    
+    <header>
+        <div class="logo">
+            <h1>jordan rojas y leon tienda</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#promociones">Promociones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-area">
+            <input type="search" placeholder="Buscar...">
+            <button>Login</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="section-container">
+            <h2>Inicio</h2>
+            <div class="content-wrapper">
+                <div class="sidebar">
+                    <h3>Últimas Noticias</h3>
+                    <ul>
+                        <li>Noticia 1</li>
+                        <li>Noticia 2</li>
+                        <li>Noticia 3</li>
+                    </ul>
+                </div>
+                <div class="main-content">
+                    <div class="card">
+                        <h4>Artículo Destacado 1</h4>
+                        <p>Breve descripción del artículo 1...</p>
+                    </div>
+                    <div class="card">
+                        <h4>Artículo Destacado 2</h4>
+                        <p>Breve descripción del artículo 2...</p>
+                    </div>
+                    <div class="card">
+                        <h4>Artículo Destacado 3</h4>
+                        <p>Breve descripción del artículo 3...</p>
+                    </div>
+                    <div class="card">
+                        <h4>Artículo Destacado 4</h4>
+                        <p>Breve descripción del artículo 4...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" class="section-container">
+            <h2>Nuestros Productos</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>Nombre del Producto</h3>
+                    <ul>
+                        <li>**Atributo 1:** Valor del atributo</li>
+                        <li>**Atributo 2:** Otro valor</li>
+                        <li>**Atributo 3:** Dato importante</li>
+                        <li>**Atributo 4:** Característica especial</li>
+                        <li>**Atributo 5:** Especificación técnica</li>
+                        <li>**Atributo 6:** Material o composición</li>
+                        <li>**Atributo 7:** Dimensiones o peso</li>
+                    </ul>
+                    <p class="price">$XX.XX</p>
+                    <button>Añadir al Carrito</button>
+                </div>
+                <div class="product-card">
+                    <h3>Otro Producto</h3>
+                    <ul>
+                        <li>**Atributo 1:** Valor del atributo</li>
+                        <li>**Atributo 2:** Otro valor</li>
+                        <li>**Atributo 3:** Dato importante</li>
+                        <li>**Atributo 4:** Característica especial</li>
+                        <li>**Atributo 5:** Especificación técnica</li>
+                        <li>**Atributo 6:** Material o composición</li>
+                        <li>**Atributo 7:** Dimensiones o peso</li>
+                    </ul>
+                    <p class="price">$YY.YY</p>
+                    <button>Añadir al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="promociones" class="section-container">
+            <h2>Promociones Especiales</h2>
+            <div class="promotions-grid">
+                <div class="promo-card">
+                    <h3>Oferta de Verano</h3>
+                    <p>Descuento del 20% en productos seleccionados.</p>
+                    <img src="https://via.placeholder.com/150" alt="Promoción Verano">
+                </div>
+                <div class="promo-card">
+                    <h3>Envío Gratis</h3>
+                    <p>En pedidos superiores a $50.</p>
+                    <img src="https://via.placeholder.com/150" alt="Envío Gratis">
+                </div>
+                 <div class="promo-card">
+                    <h3>Nuevos Clientes</h3>
+                    <p>15% de descuento en tu primera compra.</p>
+                    <img src="https://via.placeholder.com/150" alt="Nuevos Clientes">
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section-container">
+            <h2>Contáctanos</h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="subject">Asunto:</label>
+                    <input type="text" id="subject" name="subject">
+
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p><strong>Dirección:</strong> Tu Calle, Tu Ciudad, Tu País</p>
+                    <p><strong>Teléfono:</strong> +123 456 7890</p>
+                    <p><strong>Email:</strong> info@tumarca.com</p>
+                    <div class="social-media">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://github.com/jorsito2025/pag_web_jord.git" target="_blank"><i class="fab fa-github"></i></a>
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Mi Marca. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+            </div>
+        </div>
+        <div class="newsletter-signup">
+            <h4>Suscríbete a nuestro boletín</h4>
+            <input type="email" placeholder="Tu email">
+            <button>Suscribirse</button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
