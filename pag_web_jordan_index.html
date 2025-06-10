@@ -3,180 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página Web</title>
+    <title>Jordan Rojas y León Tienda</title>
+    <!-- Carga de Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de fuente Inter para Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Carga de Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-</head>
-<body>
-"burbuja de whatsapp"
-
-    <a href="https://wa.me/56986962991" class="whatsapp-bubble" target="_blank">
-        <i class="fab fa-whatsapp"></i>
+<body class="bg-gray-100 font-inter text-gray-800 antialiased">
+    <!-- Burbuja de WhatsApp (flotante) -->
+    <a href="https://wa.me/56986962991" class="whatsapp-bubble fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 z-50" target="_blank">
+        <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
-</body>
-</html>
-    <header>
-        <div class="logo">
-            <h1>jordan rojas y leon tienda</h1>
+    <!-- Encabezado de la página -->
+    <header class="bg-white shadow-md p-4 flex flex-col md:flex-row items-center justify-between sticky top-0 z-40">
+        <div class="logo mb-4 md:mb-0">
+            <h1 class="text-2xl font-bold text-gray-900">Jordan Rojas y León Tienda</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#promociones">Promociones</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+        <nav class="flex-grow">
+            <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 justify-center">
+                <li><a href="#inicio" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-md py-1 px-3">Inicio</a></li>
+                <li><a href="#productos" id="link-productos" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-md py-1 px-3">Productos</a></li>
+                <li><a href="#ofertas" id="link-ofertas" class="text-gray-600 hover:text-red-600 font-medium transition duration-300 rounded-md py-1 px-3">Ofertas (10% Dto.)</a></li>
+                <li><a href="#promociones" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-md py-1 px-3">Promociones</a></li>
+                <li><a href="#contacto" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300 rounded-md py-1 px-3">Contacto</a></li>
             </ul>
         </nav>
-        <div class="user-area">
-            <input type="search" placeholder="Buscar...">
-            <button>Login</button>
+        <div class="user-area flex items-center space-x-4 mt-4 md:mt-0">
+            <input type="search" placeholder="Buscar..." class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Login</button>
         </div>
     </header>
 
-    <main>
-        <section id="inicio" class="section-container">
-            <h2>Inicio</h2>
-            <div class="content-wrapper">
-                <div class="sidebar">
-                    <h3>Últimas Noticias</h3>
-                    <ul>
+    <!-- Contenido principal de la página -->
+    <main class="container mx-auto p-6 md:p-8 space-y-10">
+        <section id="inicio" class="section-container bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Inicio</h2>
+            <div class="content-wrapper flex flex-col md:flex-row gap-8">
+                <div class="sidebar w-full md:w-1/4 bg-blue-50 p-4 rounded-lg shadow-inner">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-4">Últimas Noticias</h3>
+                    <ul class="space-y-2">
                         <li>Noticia 1</li>
                         <li>Noticia 2</li>
                         <li>Noticia 3</li>
                     </ul>
                 </div>
-                <div class="main-content">
-                    <div class="card">
-                        <h4>Artículo Destacado 1</h4>
-                        <p>Breve descripción del artículo 1...</p>
+                <div class="main-content w-full md:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="card bg-white border border-gray-200 rounded-lg shadow-sm p-4 hover:shadow-md transition duration-300">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Artículo Destacado 1</h4>
+                        <p class="text-gray-600 text-sm">Breve descripción del artículo 1...</p>
                     </div>
-                    <div class="card">
-                        <h4>Artículo Destacado 2</h4>
-                        <p>Breve descripción del artículo 2...</p>
+                    <div class="card bg-white border border-gray-200 rounded-lg shadow-sm p-4 hover:shadow-md transition duration-300">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Artículo Destacado 2</h4>
+                        <p class="text-gray-600 text-sm">Breve descripción del artículo 2...</p>
                     </div>
-                    <div class="card">
-                        <h4>Artículo Destacado 3</h4>
-                        <p>Breve descripción del artículo 3...</p>
+                    <div class="card bg-white border border-gray-200 rounded-lg shadow-sm p-4 hover:shadow-md transition duration-300">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Artículo Destacado 3</h4>
+                        <p class="text-gray-600 text-sm">Breve descripción del artículo 3...</p>
                     </div>
-                    <div class="card">
-                        <h4>Artículo Destacado 4</h4>
-                        <p>Breve descripción del artículo 4...</p>
+                    <div class="card bg-white border border-gray-200 rounded-lg shadow-sm p-4 hover:shadow-md transition duration-300">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-2">Artículo Destacado 4</h4>
+                        <p class="text-gray-600 text-sm">Breve descripción del artículo 4...</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="productos" class="section-container">
-            <h2>Nuestros Productos</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <h3>Nintendo Switch2 <img src="C:\Users\Nico\OneDrive\Escritorio\github codigo\pag_web_jord\descarga.jpg" alt="nintendo switch 2" style="vertical-align: middle; margin-left: 10px; width: 250px; height: 250px;"></h3>
-                    <ul>
-                        <li>**Atributo 1:** Valor del atributo</li>
-                        <li>**Atributo 2:** Otro valor</li>
-                        <li>**Atributo 3:** Dato importante</li>
-                        <li>**Atributo 4:** Característica especial</li>
-                        <li>**Atributo 5:** Especificación técnica</li>
-                        <li>**Atributo 6:** Material o composición</li>
-                        <li>**Atributo 7:** Dimensiones o peso</li>
+        <section id="productos" class="section-container bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Nuestros Productos</h2>
+            <div class="product-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Productos con data-oferta="true" para el 10% de descuento -->
+                <div class="product-card bg-white border border-gray-200 rounded-lg shadow-lg p-6 flex flex-col items-center text-center" data-precio="999.99" data-oferta="true">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Nintendo Switch 2</h3>
+                    <!-- Placeholder de imagen: Reemplaza con tu imagen real -->
+                    <img src="https://placehold.co/250x250/E0E7FF/000000?text=Nintendo+Switch+2" alt="nintendo switch 2" class="w-48 h-48 object-contain rounded-md mb-4">
+                    <ul class="list-none p-0 m-0 text-left w-full space-y-2 text-gray-700">
+                        <li><strong class="text-gray-900">Atributo 1:</strong> Valor del atributo</li>
+                        <li><strong class="text-gray-900">Atributo 2:</strong> Otro valor</li>
+                        <li><strong class="text-gray-900">Atributo 3:</strong> Dato importante</li>
+                        <li><strong class="text-gray-900">Atributo 4:</strong> Característica especial</li>
+                        <li><strong class="text-gray-900">Atributo 5:</strong> Especificación técnica</li>
+                        <li><strong class="text-gray-900">Atributo 6:</strong> Material o composición</li>
+                        <li><strong class="text-gray-900">Atributo 7:</strong> Dimensiones o peso</li>
                     </ul>
-                    <p class="price">$XX.XX</p>
-                    <button>Añadir al Carrito</button>
+                    <p class="price text-3xl font-bold text-blue-600 mt-4 mb-6">$999.99</p>
+                    <button class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition duration-300 shadow-lg">Añadir al Carrito</button>
                 </div>
-                <div class="product-card">
-                    <h3>Otro Producto</h3>
-                    <ul>
-                        <li>**Atributo 1:** Valor del atributo</li>
-                        <li>**Atributo 2:** Otro valor</li>
-                        <li>**Atributo 3:** Dato importante</li>
-                        <li>**Atributo 4:** Característica especial</li>
-                        <li>**Atributo 5:** Especificación técnica</li>
-                        <li>**Atributo 6:** Material o composición</li>
-                        <li>**Atributo 7:** Dimensiones o peso</li>
+                <div class="product-card bg-white border border-gray-200 rounded-lg shadow-lg p-6 flex flex-col items-center text-center" data-precio="499.99" data-oferta="true">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Otro Producto</h3>
+                     <!-- Placeholder de imagen: Reemplaza con tu imagen real -->
+                    <img src="https://placehold.co/250x250/E0E7FF/000000?text=Otro+Producto" alt="otro producto" class="w-48 h-48 object-contain rounded-md mb-4">
+                    <ul class="list-none p-0 m-0 text-left w-full space-y-2 text-gray-700">
+                        <li><strong class="text-gray-900">Atributo 1:</strong> Valor del atributo</li>
+                        <li><strong class="text-gray-900">Atributo 2:</strong> Otro valor</li>
+                        <li><strong class="text-gray-900">Atributo 3:</strong> Dato importante</li>
+                        <li><strong class="text-gray-900">Atributo 4:</strong> Característica especial</li>
+                        <li><strong class="text-gray-900">Atributo 5:</strong> Especificación técnica</li>
+                        <li><strong class="text-gray-900">Atributo 6:</strong> Material o composición</li>
+                        <li><strong class="text-gray-900">Atributo 7:</strong> Dimensiones o peso</li>
                     </ul>
-                    <p class="price">$YY.YY</p>
-                    <button>Añadir al Carrito</button>
+                    <p class="price text-3xl font-bold text-blue-600 mt-4 mb-6">$499.99</p>
+                    <button class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition duration-300 shadow-lg">Añadir al Carrito</button>
+                </div>
+                 <div class="product-card bg-white border border-gray-200 rounded-lg shadow-lg p-6 flex flex-col items-center text-center" data-precio="199.99">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Producto 3</h3>
+                     <!-- Placeholder de imagen: Reemplaza con tu imagen real -->
+                    <img src="https://placehold.co/250x250/E0E7FF/000000?text=Producto+3" alt="producto 3" class="w-48 h-48 object-contain rounded-md mb-4">
+                    <ul class="list-none p-0 m-0 text-left w-full space-y-2 text-gray-700">
+                        <li><strong class="text-gray-900">Atributo 1:</strong> Valor del atributo</li>
+                        <li><strong class="text-gray-900">Atributo 2:</strong> Otro valor</li>
+                        <li><strong class="text-gray-900">Atributo 3:</strong> Dato importante</li>
+                        <li><strong class="text-gray-900">Atributo 4:</strong> Característica especial</li>
+                        <li><strong class="text-gray-900">Atributo 5:</strong> Especificación técnica</li>
+                        <li><strong class="text-gray-900">Atributo 6:</strong> Material o composición</li>
+                        <li><strong class="text-gray-900">Atributo 7:</strong> Dimensiones o peso</li>
+                    </ul>
+                    <p class="price text-3xl font-bold text-blue-600 mt-4 mb-6">$199.99</p>
+                    <button class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition duration-300 shadow-lg">Añadir al Carrito</button>
+                </div>
+                <!-- Aquí podrías añadir productos NO en oferta si los hubiera -->
+                <!--
+                <div class="product-card bg-white border border-gray-200 rounded-lg shadow-lg p-6 flex flex-col items-center text-center" data-precio="50.00">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Producto Sin Oferta</h3>
+                    <img src="https://placehold.co/250x250/E0E7FF/000000?text=Sin+Oferta" alt="producto sin oferta" class="w-48 h-48 object-contain rounded-md mb-4">
+                    <ul class="list-none p-0 m-0 text-left w-full space-y-2 text-gray-700">
+                        <li><strong class="text-gray-900">Atributo:</strong> Valor</li>
+                    </ul>
+                    <p class="price text-3xl font-bold text-blue-600 mt-4 mb-6">$50.00</p>
+                    <button class="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition duration-300 shadow-lg">Añadir al Carrito</button>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <section id="promociones" class="section-container bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Promociones Especiales</h2>
+            <div class="promotions-grid grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="promo-card bg-purple-50 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+                    <h3 class="text-xl font-semibold text-purple-800 mb-2">Oferta de Verano</h3>
+                    <p class="text-gray-700 mb-4">Descuento del 20% en productos seleccionados.</p>
+                    <img src="https://placehold.co/150x150/CFE2F3/000000?text=Promo+Verano" alt="Promoción Verano" class="rounded-md">
+                </div>
+                <div class="promo-card bg-purple-50 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+                    <h3 class="text-xl font-semibold text-purple-800 mb-2">Envío Gratis</h3>
+                    <p class="text-gray-700 mb-4">En pedidos superiores a $50.</p>
+                    <img src="https://placehold.co/150x150/CFE2F3/000000?text=Envio+Gratis" alt="Envío Gratis" class="rounded-md">
+                </div>
+                <div class="promo-card bg-purple-50 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+                    <h3 class="text-xl font-semibold text-purple-800 mb-2">Nuevos Clientes</h3>
+                    <p class="text-gray-700 mb-4">15% de descuento en tu primera compra.</p>
+                    <img src="https://placehold.co/150x150/CFE2F3/000000?text=Nuevos+Clientes" alt="Nuevos Clientes" class="rounded-md">
                 </div>
             </div>
         </section>
 
-        <section id="promociones" class="section-container">
-            <h2>Promociones Especiales</h2>
-            <div class="promotions-grid">
-                <div class="promo-card">
-                    <h3>Oferta de Verano</h3>
-                    <p>Descuento del 20% en productos seleccionados.</p>
-                    <img src="https://via.placeholder.com/150" alt="Promoción Verano">
-                </div>
-                <div class="promo-card">
-                    <h3>Envío Gratis</h3>
-                    <p>En pedidos superiores a $50.</p>
-                    <img src="https://via.placeholder.com/150" alt="Envío Gratis">
-                </div>
-                 <div class="promo-card">
-                    <h3>Nuevos Clientes</h3>
-                    <p>15% de descuento en tu primera compra.</p>
-                    <img src="https://via.placeholder.com/150" alt="Nuevos Clientes">
-                </div>
-            </div>
-        </section>
+        <section id="contacto" class="section-container bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Contáctanos</h2>
+            <div class="contact-content flex flex-col md:flex-row gap-8">
+                <form class="contact-form w-full md:w-1/2 bg-white p-6 rounded-lg shadow-md space-y-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-1">Nombre:</label>
+                    <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
 
-        <section id="contacto" class="section-container">
-            <h2>Contáctanos</h2>
-            <div class="contact-content">
-                <form class="contact-form">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-1">Email:</label>
+                    <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus="ring-blue-500">
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="subject" class="block text-gray-700 text-sm font-bold mb-1">Asunto:</label>
+                    <input type="text" id="subject" name="subject" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
 
-                    <label for="subject">Asunto:</label>
-                    <input type="text" id="subject" name="subject">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-1">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
 
-                    <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-
-                    <button type="submit">Enviar Mensaje</button>
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300 w-full">Enviar Mensaje</button>
                 </form>
-                <div class="contact-info">
-                    <h3>Información de Contacto</h3>
+                <div class="contact-info w-full md:w-1/2 bg-gray-50 p-6 rounded-lg shadow-md space-y-3 text-gray-700">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Información de Contacto</h3>
                     <p><strong>Dirección:</strong> Tu Calle, Tu Ciudad, Tu País</p>
                     <p><strong>Teléfono:</strong> +123 456 7890</p>
                     <p><strong>Email:</strong> info@tumarca.com</p>
-                    <div class="social-media">
-                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://github.com/jorsito2025/pag_web_jord.git" target="_blank"><i class="fab fa-github"></i></a>
-                    
-                        
+                    <div class="social-media flex space-x-4 mt-4">
+                        <a href="https://facebook.com" target="_blank" class="text-blue-600 text-2xl hover:text-blue-800 transition duration-300"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="text-pink-600 text-2xl hover:text-pink-800 transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="text-blue-400 text-2xl hover:text-blue-600 transition duration-300"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://github.com/jorsito2025/pag_web_jord.git" target="_blank" class="text-gray-700 text-2xl hover:text-gray-900 transition duration-300"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 Mi Marca. Todos los derechos reservados.</p>
-            <div class="footer-links">
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Términos y Condiciones</a>
+    <!-- Pie de página -->
+    <footer class="bg-gray-800 text-gray-300 p-6 md:p-8 mt-10">
+        <div class="footer-content container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            <p>&copy; 2025 Jordan Rojas y León Tienda. Todos los derechos reservados.</p>
+            <div class="footer-links flex space-x-4">
+                <a href="#" class="hover:text-white transition duration-300">Política de Privacidad</a>
+                <a href="#" class="hover:text-white transition duration-300">Términos y Condiciones</a>
             </div>
         </div>
-        <div class="newsletter-signup">
-            <h4>Suscríbete a nuestro boletín</h4>
-            <input type="email" placeholder="Tu email">
-            <button>Suscribirse</button>
+        <div class="newsletter-signup container mx-auto mt-6 md:mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <h4 class="text-lg font-semibold text-white mb-2 sm:mb-0">Suscríbete a nuestro boletín</h4>
+            <input type="email" placeholder="Tu email" class="px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300">Suscribirse</button>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
