@@ -28,6 +28,12 @@
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
+    <!-- Mensaje de bienvenida (flotante) -->
+    <div class="welcome-message fixed bottom-24 left-6 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-bounce-slow cursor-pointer" onclick="this.style.display='none'">
+        <p class="font-semibold">¡Bienvenido!</p>
+        <span class="text-xs opacity-80">(Haz clic para cerrar)</span>
+    </div>
+
     <!-- Encabezado de la página -->
     <header class="bg-white shadow-md p-4 flex flex-col md:flex-row items-center justify-between sticky top-0 z-40">
         <div class="logo mb-4 md:mb-0">
@@ -164,7 +170,7 @@
                 </div>
                 <div class="promo-card bg-purple-50 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
                     <h3 class="text-xl font-semibold text-purple-800 mb-2">Nuevos Clientes</h3>
-                    <p class="text-gray-700 mb-4">15% de descuento en tu primera compra.</p>
+                    <p class="text-700 mb-4">15% de descuento en tu primera compra.</p>
                     <img src="https://placehold.co/150x150/CFE2F3/000000?text=Nuevos+Clientes" alt="Nuevos Clientes" class="rounded-md">
                 </div>
             </div>
